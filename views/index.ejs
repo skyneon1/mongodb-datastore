@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GYM WEB</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0px;
+			padding: 0px;
+			background: url('../bg.jpg');
+			color: black;
+			background-repeat: repeat;
+			
+		
+			/*border: 2px solid yellow;*/
+		}
+		.left{
+			/*border:2px solid red;*/
+			display: inline-block;
+			position: absolute;
+			top: 18px;
+			left: 34px;
+
+
+		}
+		.left img {
+			width: 95px;
+			height: auto;
+
+		}
+		.left div{
+			text-align: center;
+			font-style: italic;
+			font-size: 22px;
+			line-height: 0px;
+		}
+		.mid{
+			/*border:2px solid blue;*/
+			display:block;
+			width: 55%;
+			margin: 25px auto;
+			font-family: sans-serif;
+			
+
+		}
+		.right{
+			/*border:2px solid green;*/
+			display: inline-block;
+			position: absolute;
+			top: 24px;
+			right: 4px;
+
+		}
+		.navbar{
+			display: inline-block;
+
+
+		}
+		.navbar li{
+			display: inline-block;
+			font-size: 24px;
+
+		}
+		.navbar li a{
+			
+			text-decoration: none;
+			padding: 34px 23px;
+		}
+		.navbar li a:hover{
+			text-decoration: underline;
+			color: green;
+		}
+		.navbar li a:active{
+			color: red;
+		}
+		.btn {
+			margin: 0px 5px;
+		    padding: 4px 14px;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    font-size: 15px;
+		}
+		.container{
+			border: 2px solid aqua;
+			margin: 105px 165px;
+			padding: 120px 151px;
+			width: 77%;
+			border-radius: 7px;
+
+		}
+		.container h1{
+			text-align: center;
+		}
+		.form-group input{
+			text-align: center;
+			display: block;
+			margin: 6px auto;
+			padding: 4px;
+			width: 430px;
+			border: 3px solid #838a89;
+			font-size: 19px; 
+			border-radius: 10px; 
+		}
+        .container button {
+            display: block;
+            width: 424px;
+            margin: 19px auto;
+            font-size: 19px;
+        }
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="left">
+		     <img src="../logo.png" alt="not found">
+		     <div>SONIC ANI</div>
+		</div>
+		<div class="mid">
+			<ul class="navbar">
+			 <li><a href="#">Home</a></li>
+			 <li><a href="#">About</a></li>
+			 <li><a href="#">Services</a></li>
+			 <li><a href="#">Contact us</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<button class="btn">Call us now</button>
+			<button class="btn">Email us</button>
+		</div>
+	</header>
+
+	<div class="container">
+		<h1>Join the best gym of INDIA now</h1>
+		<form method="post" action="/submit">
+			<div class="form-group">
+				<input type="text" name="name" placeholder="Enter your Name">
+			</div>
+			<div class="form-group">
+				<input type="text" name="age" placeholder="Enter your Age">
+			</div>
+			<div class="form-group">
+				<input type="text" name="gender" placeholder="Enter your Gender">
+			</div>
+			<div class="form-group">
+				<input type="text" name="locality" placeholder="Enter your Locality">
+			</div>
+			<div class="form-group">
+				<input type="text" name="phone" placeholder="Enter your Phone No.">
+			</div>
+			<div class="form-group">
+				<input type="email" name="email" placeholder="Enter your Email">
+			</div>
+			<button class="btn">SUBMIT NOW</button>
+		</form>
+	</div>
+	<script src="user.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

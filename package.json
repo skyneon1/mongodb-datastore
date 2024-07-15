@@ -1,0 +1,18 @@
+{
+  "name": "mongodb-online",
+  "version": "1.0.0",
+  "description": "Static view of this project - https://skyneon1.github.io/GYM-LOGIN-PAGE/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "build": "^0.1.4",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "nodemon": "^3.1.4"
+  }
+}
