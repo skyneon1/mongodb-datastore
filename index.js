@@ -8,7 +8,7 @@ const port = 3000;
 const User = require("./user");
 
 // MongoDB Atlas connection string
-const uri = 'mongodb+srv://<USER ID HRER>:<PASSWORD HERE>@gymdb.dqrhbsz.mongodb.net/gymdb';
+const uri = 'mongodb+srv://delta010:sky009neon@gymdb.dqrhbsz.mongodb.net/gymdb';
 
 // Configure mongoose to use promises and avoid deprecation warnings
 mongoose.Promise = global.Promise;
