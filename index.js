@@ -8,20 +8,20 @@ const port = 3000;
 const User = require("./user");
 
 // MongoDB Atlas connection string
-const uri  = 'mongodb+srv://delta010:sky009neon@gymdb.dqrhbsz.mongodb.net/gymdb';
+const uri = 'mongodb+srv://delta010:sky009neon@gymdb.dqrhbsz.mongodb.net/gymdb';
 
-
-// Configure mongoose to use promises
+// Configure mongoose to use promises and avoid deprecation warnings
 mongoose.Promise = global.Promise;
-
-// Connect to MongoDB Atlas
-mongoose.connect(uri)
-  .then(() => {
-    console.log('Connected to MongoDB Atlas');
-  })
-  .catch((err) => {
-    console.error('Error connecting to MongoDB Atlas:', err.message);
-  });
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log('Connected to MongoDB Atlas');
+})
+.catch((err) => {
+  console.error('Error connecting to MongoDB Atlas:', err.message);
+});
 
 // Middleware
 app.set("view engine", "ejs");
@@ -47,11 +47,12 @@ app.post("/submit", (req, res) => {
 
     newUser.save()
         .then(() => {
+            console.log("User data saved successfully:", newUser);
             res.send("Successfully submitted!");
         })
         .catch(err => {
-            console.error(err);
-            res.send("There was an error saving your information.");
+            console.error("Error saving user data:", err);
+            res.status(500).send("There was an error saving your information.");
         });
 });
 
