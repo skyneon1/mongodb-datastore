@@ -22,11 +22,14 @@ jobs:
       run: npm install
 
     - name: Run 
-      run: node index.js
+      run: npm install mongodb
+
+    - name: Dpendencies 
+      run: npm install express mongoose body-parser
+
 
     - name: Deploy to production (example)
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
       run: |
-        npm install
-        npm run
+        node index.js
